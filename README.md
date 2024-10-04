@@ -8,6 +8,7 @@ In this project, a series of tasks were undertaken with the aim of building a th
 - [Usage](#usage)
 - [Features](#features)
 - [Contact](#contact)
+- [References](#references)
 
 ## Installation
 
@@ -36,6 +37,10 @@ In order to install the project on your machine, follow these steps:
 - **Feature 3**: 
 
 
-## Contact
+## Contributors
 
-Created by [@username](https://github.com/username)
+Created by Luke Corcoran [@g00410404](https://github.com/g00410404)
+
+## References
+
+This work was assisted by OpenAI’s ChatGPT for providing insights and clarifying key concepts, and for guidance on README structure and formatting.
