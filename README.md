@@ -14,19 +14,33 @@ In this project, a series of tasks were undertaken with the aim of building a th
 
 In order to install the project on your machine, follow these steps:
 
-1. **Clone the repository:**
-   ```
-   git clone https://github.com/username/repository-name.git
-   ```
-   
-2. **Navigate to the project directory:**
-   ```
-   cd repository-name
-   ```
-   
-3. **Install dependencies:**
-4. **Start the application:**
+1. **Install Visual Studio Code**
+   Make sure that Visual Studio Code is installed on your machine.
+   - Go to the Visual Studio Code download page.
+   - Download the Windows installer (.exe).
+   - Run the installer and follow the prompts to complete the installation.
+   Once installed, you can launch Visual Studio Code either normally or by typing code in your terminal (after ensuring it's added to your PATH).
 
+2. **Clone the repository:**
+   Open your Command Line Interface and clone the project to your machine.
+   ```
+   git clone https://github.com/g00410404/EmergingTechG00410404.git
+   ```
+3. **Navigate to the project directory:**
+   ```
+   cd path/to/the/project
+   ```
+4. **Open Visual Studio Code via Project Directory**
+   ```
+   code .
+   ```
+5. **Install dependencies:**
+   -  Click on the Extensions icon in the Activity Bar on the side
+   -  Search for "Jupyter" and install the Jupyter extension provided by Microsoft
+   -  Then, search for "Python" in the Extensions view and install the Python extension by Microsoft.
+6. **Start the application:**
+   After installing the extensions, you can open .ipynb files directly. Just navigate to the notebook file in your project VS Code and click on it to open.
+   
 ## Usage
 
 
