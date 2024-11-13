@@ -76,3 +76,4 @@ Created by Luke Corcoran [@g00410404](https://github.com/g00410404)
 ## References
 
 - This work was assisted by OpenAI’s ChatGPT and Microsoft's Copilot for providing insights and clarifying key concepts, and for guidance on aspects of repository structure and formatting.
+- Further references can be found in the documentation within the source files.
