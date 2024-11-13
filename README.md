@@ -42,13 +42,22 @@ In order to install the project on your machine, follow these steps:
    After installing the extensions, you can open .ipynb files directly. Just navigate to the notebook file in your project VS Code and click on it to open.
    
 ## Usage
+**Trigram Model Tasks**
+Simply navigate to trigram.ipynb and hit 'Run All'. This will execute all code cells, demonstrating the functionality of the implementation of each task.
+**ELIZA Chatbot**
 
 
 ## Features
+**Trigram Model Tasks**
+*- Feature 1: Trigram Model Creation*
+Generates a third-order letter approximation model using multiple English texts. This model captures sequences of three characters (trigrams) and stores their frequency.
 
-- **Feature 1**: 
-- **Feature 2**: 
-- **Feature 3**: 
+*- Feature 2: Text Generation Using Trigram Model*
+Utilizes the trigram model created previously to generate a 10,000-character string. Starting with a given pair of characters, it selects each next character based on weighted probability until it reaches 10,000 characters.
+
+*- Feature 3: Model Analysis and Validation*
+Analyzes the generated string by comparing it against a list of English words, calculating the percentage of actual English words in the generated string. 
+**ELIZA Chatbot**
 
 
 ## Contributors
