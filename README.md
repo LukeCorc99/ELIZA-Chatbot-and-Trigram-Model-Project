@@ -52,9 +52,11 @@ Simply navigate to trigram.ipynb and hit 'Run All'. This will execute all code c
 
 
 *- Feature 1: Trigram Model Creation*
+
 Generates a third-order letter approximation model using multiple English texts. This model captures sequences of three characters (trigrams) and stores their frequency.
 
 *- Feature 2: Text Generation Using Trigram Model*
+
 Utilizes the trigram model created previously to generate a 10,000-character string. Starting with a given pair of characters, it selects each next character based on weighted probability until it reaches 10,000 characters.
 
 *- Feature 3: Model Analysis and Validation*
