@@ -43,7 +43,10 @@ In order to install the project on your machine, follow these steps:
    
 ## Usage
 **Trigram Model Tasks:**
+
 Simply navigate to trigram.ipynb and hit 'Run All'. This will execute all code cells, demonstrating the functionality of the implementation of each task.
+
+
 **ELIZA Chatbot:**
 
 
