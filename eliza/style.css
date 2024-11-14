@@ -5,16 +5,56 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: rgba(209, 203, 203, 0.945);
 }
 
 .container {
+    margin: 10px auto;
     width: 80%;
     max-width: 600px;
+    height: 60%;
     padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border: 1px solid gray;
     border-radius: 8px;
+}
+
+.conversation {
+    padding: 10px;
+    margin: 10px;
+    background-color: #98e2ff;
     text-align: center;
+    overflow-y: auto;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+/* https://stackoverflow.com/questions/18814940/css-center-div-inside-container */
+.input {
+    text-align: center;
+}
+
+.input input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.input button {
+    padding: 10px 15px;
+    font-size: 16px;
+    height: 40px;
+    background-color: #32baf0;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.input button:hover {
+    background-color: #0056b3;
 }
