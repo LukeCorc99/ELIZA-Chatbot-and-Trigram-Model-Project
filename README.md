@@ -34,11 +34,17 @@ In order to install the project on your machine, follow these steps:
    ```
    code .
    ```
-5. **Install dependencies:**
+5. **Install Python:**
    -  Click on the Extensions icon in the Activity Bar on the side
-   -  Search for "Jupyter" and install the Jupyter extension provided by Microsoft
-   -  Then, search for "Python" in the Extensions view and install the Python extension by Microsoft.
-6. **Start the application:**
+   -  Search for "Python" in the Extensions view and install the Python extension by Microsoft.
+
+6. **Install the required dependencies for Jupyter Notebook:**
+   Run the following command to install Jupyter Notebook:
+   ```
+   pip install -r requirements.txt
+   ```
+
+7. **Start the application:**
    After installing the extensions, you can open .ipynb files directly. Just navigate to the notebook file in your project VS Code and click on it to open.
    
 ## Usage
