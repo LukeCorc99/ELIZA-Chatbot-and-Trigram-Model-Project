@@ -1,52 +1,31 @@
 // Get references to the input box, send button, and conversation area. [1]
-// These elements are selected from the DOM using their respective IDs or class selectors.
-const textbox = document.getElementById("textbox"); // Input field where the user types their message.
-const sendButton = document.getElementById("send"); // Button to send the user's input to the chatbot.
-const conversationArea = document.querySelector(".conversation"); // Area where the conversation (user and ELIZA messages) is displayed.
+// These will be used to alter specific elements in the UI.
+const textbox = document.getElementById("textbox"); // Input field.
+const sendButton = document.getElementById("send"); // Button to send the user's message.
+const conversationArea = document.querySelector(".conversation"); // Area where the conversation is displayed.
 
+// Store the user's message and convert it to lowercase for easier processing. [2]
+const userMessage = textbox.value.toLowerCase();
 
-// Function to add a message to the conversation area
-function addMessage(sender, text) {
-    const messageDiv = document.createElement("div");
-    messageDiv.classList.add("message");
-    if (sender === "user") {
-        messageDiv.style.textAlign = "right"; // Align user messages to the right
-    }
-    messageDiv.innerHTML = `<p>${text}</p>`;
-    conversationArea.appendChild(messageDiv);
-    conversationArea.scrollTop = conversationArea.scrollHeight; // Scroll to the latest message
-}
-
-// Function to simulate ELIZA's response
-function getElizaResponse(userInput) {
-    if (userInput.toLowerCase().includes("how")) {
-        return "I'm just a chatbot, but I want to understand you better.";
-    } else if (userInput.toLowerCase().includes("feeling")) {
+// Send the message to the ELIZA Chatbot, returning a certain response based on the user's input. [3]
+function sendMessage(message) {
+    if (message.includes("how")) {
+        return "I want to understand you better.";
+    } else if (message.includes("feeling")) {
         return "Why do you feel that way?";
-    } else if (userInput.trim() === "") {
-        return "Please say something so I can respond.";
+    } else if (message == "") {
+        return "Is there anything you want to say?.";
     }
     return "Tell me more about that.";
 }
 
-// Function to handle the send button click
-function handleSend() {
-    const userInput = textbox.value.trim();
-    if (userInput) {
-        addMessage("user", userInput); // Add user's message
-        const response = getElizaResponse(userInput); // Get ELIZA's response
-        setTimeout(() => addMessage("eliza", response), 1000); // Simulate response delay
-    }
-    textbox.value = ""; // Clear the textbox
-}
+// Return the chatbot's response to the conversation area.
+elizaReponse = sendMessage(userMessage);
 
-// Add event listener to the send button
-sendButton.addEventListener("click", handleSend);
 
-// Add event listener for the Enter key in the input box
-textbox.addEventListener("keypress", (event) => {
-    if (event.key === "Enter") {
-        handleSend();
-    }
-});
 
+/* References:
+[1] Getting references to elements in the UI:         https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
+[2] Storing a value fetched using getElementById:     https://chatgpt.com/c/673f5b54-5f5c-800f-ac7b-4b14a7521f8d
+[3] Using includes() to check for a substring:        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
+*/
