@@ -19,15 +19,18 @@
             </div>
             <!-- Conversation area where messages are displayed. -->
             <div class="conversation">
-                <div class="message">
-                    <p>I'm ELIZA. How can I help?</p> 
+                <div class="elizamessage">
+                    <div class="eliza">
+                        <p>I'm ELIZA. How can I help?</p>
+                    </div>
                 </div>
+                <div id="user" class="usermessage"></div>
             </div>
             <!-- Input area for user interaction. -->
             <!-- Placeholder to provide text that disappears on input. [3]-->
             <div class="input" style="text-align: center">
                 <input type="text" id="textbox" placeholder="How are you feeling?">
-                <button id="send">Send</button>
+                <button onclick="handleUserMessage()">Send</button>
         </div>
     </div>
     <script src="eliza.js"></script> <!-- Links the external JavaScript file. [4]-->
@@ -35,9 +38,9 @@
 </html>
 
 <!-- References:
-    [1] Linking an external CSS file:          https://www.w3schools.com/html/html_css.asp.
-    [2] Centering a div inside a container:    https://stackoverflow.com/questions/18814940/css-center-div-inside-container.
-    [3] Placeholder attribute:                 https://www.w3schools.com/tags/att_input_placeholder.asp.
-    [4] Linking an external JavaScript file:   https://www.w3schools.com/tags/att_script_src.asp.
+ * [1] Linking an external CSS file:          https://www.w3schools.com/html/html_css.asp.
+ * [2] Centering a div inside a container:    https://stackoverflow.com/questions/18814940/css-center-div-inside-container.
+ * [3] Placeholder attribute:                 https://www.w3schools.com/tags/att_input_placeholder.asp.
+ * [4] Linking an external JavaScript file:   https://www.w3schools.com/tags/att_script_src.asp.
 -->
 
