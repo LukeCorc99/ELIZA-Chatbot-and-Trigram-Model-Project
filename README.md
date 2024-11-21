@@ -1,4 +1,4 @@
-# Emerging Technologies Assignment by Luke Corcoran
+# ELIZA Chatbot and Trigram Model Project by Luke Corcoran
 ## Overview
 
 In this project, a series of tasks were undertaken with the aim of building a third-order letter approximation model using English texts, generating text based on the model, and analyzing its accuracy, as well as creating my own version of an ELIZA chatbot which was developed using HTML, CSS, and JavaScript, and deployed via GitHub Pages. The project achieved the assessment's purpose of demonstrating my ability in detecting, contextualizing and researching an emerging technology, using it to implement a solution to a computing problem.
@@ -82,4 +82,4 @@ Created by Luke Corcoran [@g00410404](https://github.com/g00410404)
 ## References
 
 - This work was assisted by OpenAI’s ChatGPT and Microsoft's Copilot for providing insights and clarifying key concepts, and for guidance on aspects of repository structure and formatting.
-- Further references can be found in the documentation within the source files.
+- Specific references can be found in the documentation within the source files.

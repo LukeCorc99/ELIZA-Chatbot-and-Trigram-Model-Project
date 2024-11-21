@@ -1,5 +1,7 @@
+/* Styles for the entire body. */
+/* Changes the font using font-family [1] */
+/* Centers the content vertically and horizontally using flexbox (display:flex). [2] */
 body {
-    margin: 0;
     font-family: 'Oswald', sans-serif;
     display: flex;
     justify-content: center;
@@ -8,8 +10,8 @@ body {
     background-color: rgba(209, 203, 203, 0.945);
 }
 
+/* Style for the main container. */
 .container {
-    margin: 10px auto;
     width: 500px;
     height: 600px;
     padding: 20px;
@@ -18,6 +20,9 @@ body {
     border-radius: 8px;
 }
 
+/* Style for the conversation area. */
+/* Centers the text inside input elements using text-align. [3] */
+/* Includes overflow-y to allow scrolling when content exceeds the height. [4] */
 .conversation {
     width: 460px;
     height: 400px;
@@ -30,11 +35,8 @@ body {
     border-radius: 8px;
 }
 
-/* https://stackoverflow.com/questions/18814940/css-center-div-inside-container */
-.input {
-    text-align: center;
-}
-
+/* Styles for text input inside the input container. */
+/* Creates rounded corners using border-radius. [5] */
 .input input[type="text"] {
     width: 350px;
     padding: 10px;
@@ -45,6 +47,8 @@ body {
     box-sizing: border-box;
 }
 
+/* Styles for buttons inside the input container. */
+/* Uses cursor:pointer to change the mouse cursor appearance when hovering over the button element. [6] */
 .input button {
     padding: 10px 15px;
     font-size: 16px;
@@ -56,6 +60,18 @@ body {
     cursor: pointer;
 }
 
+/* Hover effect for buttons. */
+/* Changes background color on hover using button:hover. [7] */
 .input button:hover {
     background-color: #0056b3;
 }
+
+/* References:
+ * [1] How to use a custom font:                   https://fonts.google.com
+ * [2] Centering content vertically:               https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+ * [3] Centering a div inside a container:         https://stackoverflow.com/questions/18814940/css-center-div-inside-container
+ * [4] Managing overflow with scrolling:           https://developer.mozilla.org/en-US/docs/Web/CSS/overflow
+ * [5] Creating rounded corners:                   https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
+ * [6] Changing cursor appearance if clickable:    https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+ * [7] Hover effects with CSS:                     https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
+ */
