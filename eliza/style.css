@@ -47,6 +47,7 @@ body {
     max-width: 80%;
 }
 
+/* Styles for user messages. */
 .usermessage {
     text-align: right;
     background-color: #6fdc70;
