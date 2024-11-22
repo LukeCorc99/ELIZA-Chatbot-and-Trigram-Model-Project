@@ -1,5 +1,5 @@
 /* Styles for the entire body. */
-/* Changes the font using font-family [1] */
+/* Changes the font using font-family. [1] */
 /* Centers the content vertically and horizontally using flexbox (display:flex). [2] */
 body {
     font-family: 'Oswald', sans-serif;
@@ -29,33 +29,30 @@ body {
     padding: 10px;
     margin: 10px;
     background-color: #eaf9ff;
-    text-align: center;
-    overflow-y: auto;
+    overflow-y: auto; /* Keeps scrolling for overflowing messages */
     border: 1px solid gray;
     border-radius: 8px;
+    flex-direction: column;
 }
 
-/* Styles for Eliza's messages. */
+
+/* Styles for Eliza's messages */
 .elizamessage {
-    text-align: left;
-    background-color: #d1e7dd;
-    color: #0f5132;
+    background-color: #b5f4ff;
+    border-color: #dddddd;
+    border-radius: 5px;
     padding: 10px;
-    margin: 5px 0;
-    border-radius: 8px;
-    width: fit-content;
-    max-width: 80%;
+    margin: 10px 0; 
 }
 
-/* Styles for user messages. */
+/* Styles for user messages */
 .usermessage {
-    text-align: right;
-    background-color: #6fdc70;
-    padding: 8px;
-    margin: 5px;
-    border-radius: 8px;
-    display: inline-block;
+    background-color: #c3fdc6;
+	border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
 }
+
 
 /* Styles for text input inside the input container. */
 /* Creates rounded corners using border-radius. [5] */

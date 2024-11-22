@@ -11,14 +11,13 @@ const elizaConversation = document.getElementById("eliza"); // Area to display t
  * - Process:
  *   1. Checks for specific keywords in the input.
  *   2. Responds based on the keyword match.
- *   3. If no specific match is found, provides a default response.
+ *   3. Provides a default response if no specific match is found.
  *   4. Displays the response in the chat window.
  * - Output: Returns the generated response string.
  */
 function getResponse(message) {
     // Initialize response variable
     let response = "";
-
      // Check for specific keywords in the user's message using includes(), changing the response based on the keyword.
      if (message.includes("how")) {
         response = "I want to understand you better.";
@@ -53,23 +52,26 @@ function getResponse(message) {
  * Processes the user's message, removing whitespaces and converting to lowercase.
  * - Input: The text entered in the `textbox` input field.
  * - Process:
- *   1. Converts the input to lowercase for case-insensitive matching.
+ *   1. Extracts the user's message from the input field.
  *   2. Trims any whitespaces from the input.
  *   3. Displays the user's processed message in the conversation area.
- *   4. Clears the input field after processing.
+ *   4. Converts the input to lowercase for case-insensitive matching.
+ *   5. Clears the input field after processing.
  * - Output: Returns the cleaned input string.
  */
 function processMessage() {
-    // Get the user's message and convert it to lowercase for easier processing. [4]
-    const rawMessage = textbox.value.toLowerCase();
+    // Get the user's message from the input field. [4]
+    const rawMessage = textbox.value;
 
     // Trim any whitespaces from the beginning and end of the message using trim(). [5]
-    const processedMessage = rawMessage.trim();
+    const trimmedMessage = rawMessage.trim();
 
     // Display the user's message in the conversation area by using innerHTML. [3]
     if (userConversation) {
-        userConversation.innerHTML += `<p class="usermessage">${processedMessage}</p>`;
+        userConversation.innerHTML += `<p class="usermessage">${trimmedMessage}</p>`;
     }
+    // Convert the user's message to lowercase to make it case-insensitive.
+    const processedMessage = trimmedMessage.toLowerCase();
 
     // Clear the input field after user sends message.
     textbox.value = "";
@@ -83,7 +85,7 @@ function processMessage() {
  * - Input: None (internally calls `processMessage()`).
  * - Process:
  *   1. Processes the user's input to clean and display it in the chatbox.
- *   2. Generates ELIZA's response by analyzing the processed input, displaying the response in the chatbox.
+ *   2. Generates ELIZA's response by analyzing the processed input and displays the response in the chatbox.
  * - Output: None (updates the conversation flow dynamically).
  */
 function handleUserMessage() {
@@ -94,6 +96,14 @@ function handleUserMessage() {
     getResponse(userMessage);
 }
 
+// Triggers the handleUserMessage() function when the user presses enter. [6]
+textbox.addEventListener("keydown", function(event) {
+    // Check if the key pressed is enter.
+    if (event.key === "Enter") {
+        handleUserMessage(); 
+    }
+});
+
 
 
 /* References:
@@ -102,4 +112,5 @@ function handleUserMessage() {
  * [3] Displaying messages by targeting an element:          https://chatgpt.com/c/673f83fc-78e4-800f-b848-6b7feb41cd93
  * [4] Storing a value fetched using getElementById:         https://chatgpt.com/c/673f5b54-5f5c-800f-ac7b-4b14a7521f8d
  * [5] Removing whitespaces from a string:                   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
+ * [6] Triggering an event on key press (Enter key):         https://www.w3resource.com/javascript-exercises/event/javascript-event-handling-exercise-9.php  
 */
