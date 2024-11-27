@@ -240,5 +240,5 @@ function startChat() {
  * [6] Scrolling to the bottom of an element:                https://stackoverflow.com/questions/75059290/scrolltop-to-follow-bottom-of-the-page
  * [7] Appending a child element to a parent element:        https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild         
  * [8] Triggering an event on key press (Enter key):         https://www.w3resource.com/javascript-exercises/event/javascript-event-handling-exercise-9.php  
- * [9] Hiding an element by changing its display property:   https://allyjs.io/tutorials/hiding-elements.html
+ * [9] Changing an element's display property:               https://allyjs.io/tutorials/hiding-elements.html
 */
