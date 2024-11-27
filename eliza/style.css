@@ -29,33 +29,40 @@ body {
     padding: 10px;
     margin: 10px;
     background-color: #eaf9ff;
-    overflow-y: auto; /* Keeps scrolling for overflowing messages */
+    overflow-y: auto;
     border: 1px solid gray;
     border-radius: 8px;
+    display: flex;
     flex-direction: column;
 }
 
-
 /* Styles for Eliza's messages */
+/* Uses word-wrap and overflow-wrap to break long words and wrap text. [5] */
 .elizamessage {
     background-color: #b5f4ff;
-    border-color: #dddddd;
-    border-radius: 5px;
     padding: 10px;
     margin: 10px 0; 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    border: 1px solid gray;
+    border-radius: 8px;
 }
 
 /* Styles for user messages */
+/* Uses word-wrap and overflow-wrap to break long words and wrap text. [5] */
 .usermessage {
     background-color: #c3fdc6;
-	border-radius: 5px;
     padding: 10px;
     margin: 10px 0;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    border: 1px solid gray;
+    border-radius: 8px;
 }
 
 
 /* Styles for text input inside the input container. */
-/* Creates rounded corners using border-radius. [5] */
+/* Creates rounded corners using border-radius. [6] */
 .input input[type="text"] {
     width: 350px;
     padding: 10px;
@@ -67,7 +74,7 @@ body {
 }
 
 /* Styles for buttons inside the input container. */
-/* Uses cursor:pointer to change the mouse cursor appearance when hovering over the button element. [6] */
+/* Uses cursor:pointer to change the mouse cursor appearance when hovering over the button element. [7] */
 .input button {
     padding: 10px 15px;
     font-size: 16px;
@@ -80,7 +87,7 @@ body {
 }
 
 /* Hover effect for buttons. */
-/* Changes background color on hover using button:hover. [7] */
+/* Changes background color on hover using button:hover. [8] */
 .input button:hover {
     background-color: #0056b3;
 }
@@ -90,7 +97,8 @@ body {
  * [2] Centering content vertically:               https://css-tricks.com/snippets/css/a-guide-to-flexbox/
  * [3] Centering a div inside a container:         https://stackoverflow.com/questions/18814940/css-center-div-inside-container
  * [4] Managing overflow with scrolling:           https://developer.mozilla.org/en-US/docs/Web/CSS/overflow
- * [5] Creating rounded corners:                   https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
- * [6] Changing cursor appearance if clickable:    https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
- * [7] Hover effects with CSS:                     https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
+ * [5] Wrapping text to stop overflowing:          https://developer.mozilla.org/en-US/docs/Web/CSS/word-wrap
+ * [6] Creating rounded corners:                   https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
+ * [7] Changing cursor appearance if clickable:    https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+ * [8] Hover effects with CSS:                     https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
  */

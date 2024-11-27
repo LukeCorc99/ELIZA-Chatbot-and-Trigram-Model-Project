@@ -18,22 +18,21 @@
                 <p><i>by Luke Corcoran</i></p> 
             </div>
             <!-- Conversation area where messages are displayed. -->
-            <div class="conversation">
-                <!-- Area where ELIZA messages are displayed. -->
-                <div id="eliza" class="elizamessage">
+            <div id="conversation" class="conversation">
+                <!-- ELIZA's introductory message. -->
+                <div class="elizamessage">
                     <p>I'm ELIZA. How can I help?</p>
                 </div>
-                <!-- Area where user messages are displayed. -->
-                <div id="user" class="usermessage"></div>
             </div>
             <!-- Input area for user interaction. -->
-            <!-- Placeholder to provide text that disappears on input. [3]-->
             <div class="input" style="text-align: center">
-                <input type="text" id="textbox" placeholder="How are you feeling?">
-                <button onclick="handleUserMessage()">Send</button>
+                <!-- Textbox for user input. -->
+                <!-- Placeholder text is displayed when the textbox is empty [3], with autocomplete turned off to prevent input history displaying. [4] -->
+                <input type="text" id="textbox" placeholder="How are you feeling?" autocomplete="off">
+                <button onclick="processMessages()">Send</button>
         </div>
     </div>
-    <script src="eliza.js"></script> <!-- Links the external JavaScript file. [4]-->
+    <script src="eliza.js"></script> <!-- Links the external JavaScript file. [5]-->
 </body>
 </html>
 
@@ -41,6 +40,6 @@
  * [1] Linking an external CSS file:          https://www.w3schools.com/html/html_css.asp.
  * [2] Centering a div inside a container:    https://stackoverflow.com/questions/18814940/css-center-div-inside-container.
  * [3] Placeholder attribute:                 https://www.w3schools.com/tags/att_input_placeholder.asp.
- * [4] Linking an external JavaScript file:   https://www.w3schools.com/tags/att_script_src.asp.
+ * [4] Autocomplete attribute:                https://chatgpt.com/share/6746796f-33bc-800f-9631-20288b1d30b3
+ * [5] Linking an external JavaScript file:   https://www.w3schools.com/tags/att_script_src.asp.
 -->
-
