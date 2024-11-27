@@ -184,7 +184,7 @@ function processMessages() {
  * - Process:
  *   1. Creates a new paragraph element for the message.
  *   2. Sets the class name of the element for styling.
- *   3. Assigns the message text to the element's content.
+ *   3. Assigns the sender's name and message text to the element's content.
  *   4. Appends the element to the conversation area in the UI.
  * - Output: Updates the UI to include the new message.
  */
@@ -195,8 +195,12 @@ function appendMessage(content, className) {
     // Set the class name for the message element to style it accordingly.
     messageElement.className = className;
 
-    // Set the text content of the message element to the message.
-    messageElement.textContent = content;
+    // Set the text content of the message element to include the name and message.
+    if (className === "usermessage") {
+        messageElement.textContent = "You: " + content;
+    } else {
+        messageElement.textContent = "ELIZA: " + content;
+    }
 
     // Append the message element to the conversation area.
     conversation.appendChild(messageElement);
@@ -205,11 +209,25 @@ function appendMessage(content, className) {
 
 // Triggers the handleUserMessage() function when the user presses enter. [8]
 textbox.addEventListener("keydown", function(event) {
-    // Check if the key pressed is enter.
+    // Check if the key pressed is enter, process the message if it is.
     if (event.key === "Enter") {
         processMessages() 
     }
 });
+
+// Function to hide the intro screen when the user clicks the "Start Chatting" button in the user interface.
+function startChat() {
+    // Get the introductory section element.
+    const intro = document.getElementById("intro");
+    // Hide the introductory section when the user presses the button. [9]
+    intro.style.display = "none"; 
+
+     // Get the main program element.
+    const mainProgram = document.getElementById("container");
+    // Display the main program when the user presses the button. [9]
+    mainProgram.style.display = "block";
+}
+
 
 
 
@@ -222,4 +240,5 @@ textbox.addEventListener("keydown", function(event) {
  * [6] Scrolling to the bottom of an element:                https://stackoverflow.com/questions/75059290/scrolltop-to-follow-bottom-of-the-page
  * [7] Appending a child element to a parent element:        https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild         
  * [8] Triggering an event on key press (Enter key):         https://www.w3resource.com/javascript-exercises/event/javascript-event-handling-exercise-9.php  
+ * [9] Hiding an element by changing its display property:   https://allyjs.io/tutorials/hiding-elements.html
 */

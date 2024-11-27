@@ -18,6 +18,7 @@ body {
     background-color: white;
     border: 1px solid gray;
     border-radius: 8px;
+    display: none; 
 }
 
 /* Style for the conversation area. */
@@ -94,6 +95,33 @@ body {
 /* Changes background color on hover using button:hover. [9] */
 .input button:hover {
     background-color: #0056b3;
+}
+
+/* Styling for the introductory section */
+.intro {
+    text-align: center;
+    padding: 40px;
+    background-color: #f0f8ff;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+
+/* Button style for the intro section */
+/* Uses cursor:pointer to change the mouse cursor appearance when hovering over the button element. [8] */
+.intro button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #32baf0; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Button hover effect. [9] */
+.intro button:hover {
+    background-color: #0056b3; 
 }
 
 /* References:

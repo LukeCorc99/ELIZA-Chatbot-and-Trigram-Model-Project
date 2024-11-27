@@ -3,12 +3,20 @@
 <head>    
     <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Creates a consistent scale on various devices. -->
-    <title>Blank Page</title> <!-- Page title. -->
+    <title>ELIZA Chatbot</title> <!-- Page title. -->
     <link rel="stylesheet" href="style.css"> <!-- Links the external CSS file. [1] -->
 </head>
 <body>
+      <!-- Introductory message -->
+      <div id="intro" class="intro">
+        <h1>Welcome to the ELIZA Chatbot!</h1>
+        <p>Simply enter any thoughts, feelings or questions you have in the message box and ELIZA will respond accordingly.</p>
+        <p><b>For example,</b> try typing 'I'm feeling a bit down today' to see how ELIZA can help.</p>
+        <!-- Button to hide the introductory message and start the chatbot. -->
+        <button onclick="startChat()">Start Chatting</button>
+    </div>
     <!-- Main container for the entire chatbot interface. -->
-    <div class="container">
+    <div class="container" id="container">
         <!-- Chatbox wrapper. -->
         <div class="chatbox">
             <!-- Header section for chatbot information. -->
@@ -29,6 +37,7 @@
                 <!-- Textbox for user input. -->
                 <!-- Placeholder text is displayed when the textbox is empty [3]. Autocomplete is turned off to prevent input history displaying. [4] -->
                 <input type="text" id="textbox" placeholder="How are you feeling?" autocomplete="off">
+                <!-- Button to send user input. -->
                 <button onclick="processMessages()">Send</button>
         </div>
     </div>
