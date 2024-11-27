@@ -98,7 +98,7 @@ The chatbot is deployed via GitHub Pages, allowing users to interact with it dir
 
 ## Contributors
 
-Created by Luke Corcoran [@g00410404](https://github.com/g00410404)
+Created by Luke Corcoran [@LukeCorc99](https://github.com/LukeCorc99)
 
 ## References
 
