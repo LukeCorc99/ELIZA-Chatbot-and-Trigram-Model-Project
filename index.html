@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Creates a consistent scale on various devices. -->
+    <title>ELIZA Chatbot</title> <!-- Page title. -->
+    <link rel="stylesheet" href="style.css"> <!-- Links the external CSS file. [1] -->
+</head>
+<body>
+      <!-- Introductory message -->
+      <div id="intro" class="intro">
+        <h1>Welcome to the ELIZA Chatbot!</h1>
+        <p>Simply enter any thoughts, feelings or questions you have in the message box and ELIZA will respond accordingly.</p>
+        <p><b>For example,</b> try typing 'I'm feeling a bit down today' to see how ELIZA can help.</p>
+        <!-- Button to hide the introductory message and start the chatbot. -->
+        <button onclick="startChat()">Start Chatting</button>
+    </div>
+    <!-- Main container for the entire chatbot interface. -->
+    <div class="container" id="container">
+        <!-- Chatbox wrapper. -->
+        <div class="chatbox">
+            <!-- Header section for chatbot information. -->
+            <!-- Centers the text using text-align. [2]. -->
+            <div class="header" style="text-align: center">
+                <h1>ELIZA Chatbot</h1> 
+                <p><i>by Luke Corcoran</i></p> 
+            </div>
+            <!-- Conversation area where messages are displayed. -->
+            <div id="conversation" class="conversation">
+                <!-- ELIZA's introductory message. -->
+                <div class="elizamessage">
+                    <p>I'm ELIZA. How can I help?</p>
+                </div>
+            </div>
+            <!-- Input area for user interaction. -->
+            <div class="input" style="text-align: center">
+                <!-- Textbox for user input. -->
+                <!-- Placeholder text is displayed when the textbox is empty [3]. Autocomplete is turned off to prevent input history displaying. [4] -->
+                <input type="text" id="textbox" placeholder="How are you feeling?" autocomplete="off">
+                <!-- Button to send user input. -->
+                <button onclick="processMessages()">Send</button>
+        </div>
+    </div>
+    <script src="eliza.js"></script> <!-- Links the external JavaScript file. [5]-->
+</body>
+</html>
+
+<!-- References:
+ * [1] Linking an external CSS file:          https://www.w3schools.com/html/html_css.asp.
+ * [2] Centering a div inside a container:    https://stackoverflow.com/questions/18814940/css-center-div-inside-container.
+ * [3] Placeholder attribute:                 https://www.w3schools.com/tags/att_input_placeholder.asp.
+ * [4] Autocomplete attribute:                https://chatgpt.com/share/6746796f-33bc-800f-9631-20288b1d30b3
+ * [5] Linking an external JavaScript file:   https://www.w3schools.com/tags/att_script_src.asp.
+-->

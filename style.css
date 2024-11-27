@@ -1,0 +1,137 @@
+/* Styles for the entire body. */
+/* Changes the font using font-family. [1] */
+/* Centers the content vertically and horizontally using flexbox (display:flex). [2] */
+body {
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(209, 203, 203, 0.945);
+}
+
+/* Style for the main container. */
+.container {
+    width: 500px;
+    height: 600px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 8px;
+    display: none; 
+}
+
+/* Style for the conversation area. */
+/* Centers the text inside input elements using text-align. [3] */
+/* Uses overflow-y to allow scrolling when the content exceeds the container's height. [4] */
+/* Uses flexbox to align messages in a column. [5] */
+.conversation {
+    width: 460px;
+    height: 400px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #eaf9ff;
+    overflow-y: auto;
+    border: 1px solid gray;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styles for Eliza's messages */
+/* Uses word-wrap and overflow-wrap to break long words and wrap text. [6] */
+.elizamessage {
+    background-color: #b5f4ff;
+    padding: 10px;
+    margin: 10px 0; 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    border: 1px solid gray;
+    border-radius: 8px;
+    width: 70%;
+}
+
+/* Styles for user messages */
+/* Uses word-wrap and overflow-wrap to break long words and wrap text. [6] */
+.usermessage {
+    background-color: #c3fdc6;
+    padding: 10px;
+    margin: 10px 0;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    border: 1px solid gray;
+    border-radius: 8px;
+    width: 70%;
+    align-self: flex-end; 
+}
+
+
+/* Styles for text input inside the input container. */
+/* Creates rounded corners using border-radius. [7] */
+.input input[type="text"] {
+    width: 350px;
+    padding: 10px;
+    font-size: 16px;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Styles for buttons inside the input container. */
+/* Uses cursor:pointer to change the mouse cursor appearance when hovering over the button element. [8] */
+.input button {
+    padding: 10px 15px;
+    font-size: 16px;
+    height: 40px;
+    background-color: #32baf0;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Hover effect for buttons. */
+/* Changes background color on hover using button:hover. [9] */
+.input button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for the introductory section */
+.intro {
+    text-align: center;
+    padding: 40px;
+    background-color: #f0f8ff;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+
+/* Button style for the intro section */
+/* Uses cursor:pointer to change the mouse cursor appearance when hovering over the button element. [8] */
+.intro button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #32baf0; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Button hover effect. [9] */
+.intro button:hover {
+    background-color: #0056b3; 
+}
+
+/* References:
+ * [1] How to use a custom font:                   https://fonts.google.com
+ * [2] Centering content vertically:               https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+ * [3] Centering a div inside a container:         https://stackoverflow.com/questions/18814940/css-center-div-inside-container
+ * [4] Managing overflow with scrolling:           https://developer.mozilla.org/en-US/docs/Web/CSS/overflow
+ * [5] Using flexbox to align messages:            https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+ * [6] Wrapping text to stop overflowing:          https://chatgpt.com/share/67468117-f1dc-800f-9ea7-d1a4afa6969b
+ * [7] Creating rounded corners:                   https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
+ * [8] Changing cursor appearance if clickable:    https://alvarotrigo.com/blog/best-css-button-hover-effects/?utm_source=chatgpt.com
+ * [9] Hover effects with CSS:                     https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
+ */
