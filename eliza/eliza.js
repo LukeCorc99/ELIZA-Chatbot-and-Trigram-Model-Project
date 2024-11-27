@@ -9,12 +9,13 @@ const conversation = document.getElementById("conversation"); // Conversation ar
  * - Input: A `message` string representing the user's input.
  * - Process:
  *   1. Checks for specific keywords in the input.
- *   2. Responds based on the keyword match.
- *   3. Provides a default response if no specific match is found.
+ *   2. Selects response based on the keyword category.
+ *   3. Randomly selects a response from the category's response list.
+ *   4. Provides a default response if no specific match is found.
  * - Output: Returns the generated response string.
  */
 function getResponse(message) {
-    // Define keyword categories and their corresponding responses.
+    // Keyword categories and their corresponding responses.
     const keywordCategories = [
         {
             keywords: ["how", "why", "yes", "no"],
@@ -78,6 +79,24 @@ function getResponse(message) {
                 "It's nice to hear that! What's been exciting for you?",
                 "Happiness is great! What's the reason behind your joy?"
             ]
+        },
+        {
+            keywords: ["angry", "mad", "furious", "upset"],
+            responses: [
+                "I see you're upset. What happened?",
+                "Can you share why you're feeling this way?",
+                "It’s okay to feel angry. What's been bothering you?",
+                "What’s made you feel so upset?"
+            ]
+        },
+        {
+            keywords: ["confused", "lost", "unsure", "uncertain"],
+            responses: [
+                "What’s making you feel unsure?",
+                "Can you explain what’s confusing you?",
+                "Let’s try to clarify things. What’s unclear to you?",
+                "It’s normal to feel this way. Tell me more about it."
+            ]
         }
     ];
 
@@ -94,9 +113,18 @@ function getResponse(message) {
 }
 
 
-// Checks if a keyword exists in the message. Iterates over the keywords array and uses the includes() function to check for a match. [3]
+/**
+ * Checks if a keyword exists in the message. Iterates through the keywords array and uses the includes() method to check for a match. [3]
+ * - Input: 
+ *   - `keywords`: An array of strings representing potential keywords.
+ *   - `message`: A string representing the user's input message.
+ * - Process:
+ *   1. Iterates through the list of keywords.
+ *   2. Uses the `includes()` method to check if each keyword exists in the message.
+ * - Output: Returns `true` if a keyword is found, otherwise `false`.
+ */
 function containsKeyword(keywords, message) {
-    // Iterate over the selected keywords array.
+    // Iterates through the selected keywords array.
     for (let i = 0; i < keywords.length; i++) {
         // Check for specific keywords in the user's message.
         if (message.includes(keywords[i])) {
@@ -108,7 +136,7 @@ function containsKeyword(keywords, message) {
 
 
 /**
- * Processes the user's, removing whitespaces and converting to lowercase, while also displaying the user's message and ELIZA's response.
+ * Processes the user's input, removing whitespaces and converting it to lowercase, while also displaying the user's message and ELIZA's response.
  * - Input: The text entered in the `textbox` input field.
  * - Process:
  *   1. Extracts the user's message from the input field.
@@ -122,10 +150,10 @@ function containsKeyword(keywords, message) {
  * - Output: Updates the conversation area with the user's message and ELIZA's response.
  */
 function processMessages() {
-    // Get the user's message from the input field. [3]
+    // Get the user's message from the input field. [4]
     const rawMessage = textbox.value;
 
-    // Trim any whitespaces from the beginning and end of the message using trim(). [4]
+    // Trim any whitespace from the beginning and end of the message using trim(). [5]
     const trimmedMessage = rawMessage.trim();
 
     // Display the user's message in the conversation area.
@@ -143,12 +171,23 @@ function processMessages() {
     // Display ELIZA's response in the conversation area.
     appendMessage(elizaResponse, "elizamessage");
 
-    // Scroll to the bottom of the conversation. [5]
+    // Scroll to the bottom of the conversation area. [6]
     conversation.scrollTop = conversation.scrollHeight;
 }
 
 
-// Display messages in the conversation box, using both createElement and appendChild methods. [6]
+/**
+ * Display messages in the conversation box, using both createElement and appendChild methods. [7]
+ * - Input:
+ *   - `content`: A string representing the message content.
+ *   - `className`: A string representing the CSS class name to style the message.
+ * - Process:
+ *   1. Creates a new paragraph element for the message.
+ *   2. Sets the class name of the element for styling.
+ *   3. Assigns the message text to the element's content.
+ *   4. Appends the element to the conversation area in the UI.
+ * - Output: Updates the UI to include the new message.
+ */
 function appendMessage(content, className) {
     // Create a new paragraph element to display the message.
     const messageElement = document.createElement("p");
@@ -164,7 +203,7 @@ function appendMessage(content, className) {
 }
 
 
-// Triggers the handleUserMessage() function when the user presses enter. [7]
+// Triggers the handleUserMessage() function when the user presses enter. [8]
 textbox.addEventListener("keydown", function(event) {
     // Check if the key pressed is enter.
     if (event.key === "Enter") {
