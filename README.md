@@ -1,7 +1,7 @@
 # ELIZA Chatbot and Trigram Model Project by Luke Corcoran
 ## Overview
 
-In this project, a series of tasks were undertaken with the aim of building a third-order letter approximation model using English texts, generating text based on the model, and analyzing its accuracy. Additionally, I developed my own version of an ELIZA chatbot using HTML, CSS, and JavaScript, which was deployed via GitHub Pages. This project achieved the assessment's purpose of demonstrating my ability to detect, contextualize, and research an emerging technology and use it to implement a solution to a computing problem.
+This project aimed to demonstrate applications of natural language processing (NLP) and user interaction in modern software systems. Using Jupyter Notebook, a series of tasks were undertaken with the aim of creating a **third-order letter approximation model** using English texts to generate random trigram sequences. This model evaluates the sequences to calculate the percentage of valid English words present. Additionally, I developed my own version of an **ELIZA chatbot** using HTML, CSS, and JavaScript, which was deployed via GitHub Pages. This chatbot is based on the original ELIZA chatbot, created in 1966 by Joseph Weizenbaum. It simulates human conversation by generating a response based on keywords within the user's input.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -19,7 +19,7 @@ In order to install the **trigram model** project on your machine, follow these 
    - Go to the Visual Studio Code download page.
    - Download the Windows installer (.exe).
    - Run the installer and follow the prompts to complete the installation.
-   Once installed, you can launch Visual Studio Code either normally or by typing `code .` in your terminal (after ensuring it's added to your PATH).
+   Once installed, you can launch Visual Studio Code either normally or by typing `code .` in your terminal (after ensuring it is added to your PATH).
 
 2. **Clone the repository:**
    Open your Command Line Interface and clone the project to your machine:
@@ -35,11 +35,11 @@ In order to install the **trigram model** project on your machine, follow these 
    code .
    ```
 5. **Install Python:**
-   -  Click on the Extensions icon in the Activity Bar on the side
-   -  Search for "Python" in the Extensions view and install the Python extension by Microsoft.
+   -  Click on the Extensions icon in the Activity Bar on the left-hand side.
+   -  Search for "Python" in the Extensions view and install the Python extension published by Microsoft.
 
 6. **Install the required dependencies for Jupyter Notebook:**
-   Run the following command to install Jupyter Notebook:
+   Run the following command to install Jupyter Notebook and other relevant dependencies required:
    ```
    pip install -r requirements.txt
    ```
@@ -61,38 +61,34 @@ Simply navigate to trigram.ipynb and hit 'Run All'. This will execute all code c
 Simply navigate to the ELIZA Chatbot webpage [here](https://lukecorc99.github.io/ELIZA-Chatbot-and-Trigram-Model-Project/). To use the chatbot, enter any thoughts, feelings, or questions in the message box, and ELIZA will respond accordingly.
 
 ## Features
-**Trigram Model Tasks:**
+### Trigram Model Tasks:
 
 
-*- Feature 1: Trigram Model Creation*
+**- Feature 1: Trigram Model Creation**
 
 Generates a third-order letter approximation model using multiple English texts. This model captures sequences of three characters (trigrams) and stores their frequency.
 
-*- Feature 2: Text Generation Using Trigram Model*
+**- Feature 2: Text Generation Using Trigram Model**
 
-Utilizes the trigram model created previously to generate a 10,000-character string. Starting with a given pair of characters, it selects each next character based on weighted probability until the string reaches 10,000 characters.
+Utilizes the trigram model created previously to build a 10,000-character string. Starting with a given pair of characters, it selects each next character based on weighted probability until the string reaches 10,000 characters.
 
-*- Feature 3: Model Analysis and Validation*
+**- Feature 3: Model Analysis and Validation**
 
-Analyzes the generated string by comparing it against a list of English words, calculating the percentage of actual English words in the generated string. 
-
-
-**ELIZA Chatbot:**
+Analyzes the generated string by comparing it against a list of English words. Validates the model by calculating the percentage of valid English words in the string.
 
 
-*- Feature 1: Messenger Interface*
+### ELIZA Chatbot:
+
+
+**- Feature 1: Messenger Interface**
 
 The ELIZA chatbot provides a user-friendly messenger interface using HTML, CSS, and JavaScript. Users can enter text into a message box to start a conversation.
 
-*- Feature 2: Natural Language Processing* 
+**- Feature 2: Natural Language Processing**
 
-Implements keyword-based natural language processing to identify specific keywords in user input and respond with predefined messages, for example if the user mentions feeling "sad," the chatbot replies with empathetic responses.
+Implements keyword-based natural language processing to identify specific keywords in user input and reply with predefined and reflective responses. For example, if the user says "I feel sad", the chatbot will respond by saying "Why do you feel sad?".
 
-*- Feature 3: Predefined Responses*
-
-Responds to various keywords and phrases, such as greetings ("hello") or emotions ("happy" or "angry"), by selecting appropriate responses from a predefined list.
-
-*- Feature 4: Accessible Deployment*
+**- Feature 3: Accessible Deployment**
 
 The chatbot is deployed via GitHub Pages, allowing users to interact with it directly in their browsers without installation or setup
 
@@ -102,5 +98,5 @@ Created by Luke Corcoran [@LukeCorc99](https://github.com/LukeCorc99)
 
 ## References
 
-- This work was assisted by OpenAI’s ChatGPT and Microsoft's Copilot for providing insights and clarifying key concepts, and for guidance on aspects of repository structure and formatting.
+- This work was supported by OpenAI's ChatGPT and Microsoft's Copilot, which provided insights and guidance on key concepts, repository structure, and formatting
 - Specific references can be found in the documentation within the source files.
