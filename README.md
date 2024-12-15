@@ -7,7 +7,7 @@ This project aimed to demonstrate applications of natural language processing (N
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
-- [Contact](#contact)
+- [Contributors](#contributors)
 - [References](#references)
 
 ## Installation
